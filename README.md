@@ -1,6 +1,6 @@
 # bsa-spring-boot-intro
-Binary Studio Academy Spring Boot introduction lecture.
+Binary Studio Academy Spring Boot introduction lecture
 
-Such a small REST API application build in Spring boot
+Such a small REST API application built with Spring Boot
 
-Keep learning :) :heart:
+:heart: Keep learning :)
