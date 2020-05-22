@@ -1,0 +1,35 @@
+# api = http://localhost:9999/api
+
+GET {{api}}/games?some=1&another=2
+###
+
+GET {{api}}/games/fc9704f3-4f9a-477c-af1b-377144c92cc4
+###
+
+POST {{api}}/games
+Content-Type: application/json
+
+{
+  "name": "Super Mario",
+  "description": "Old school but good :) ",
+  "category": "rpg"
+}
+###
+
+PUT {{api}}/games/{{gameId}}
+Content-Type: application/json
+
+{
+  "name": "Witcher 3",
+  "description": "Nice!",
+  "category": "rpg"
+}
+###
+
+DELETE {{api}}/games/{{gameId}}
+###
+
+# return data as xml
+GET {{api}}/games
+Accept: application/xml
+###

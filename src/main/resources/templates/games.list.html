@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Games list</title>
+
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+          crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="row"></div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-sm-4" th:each="game : ${games}">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title" th:text="${game.name}"></h3>
+                                    <h4 class="card-subtitle mb-2 text-muted" th:text="${game.category.toLowerCase()}"></h4>
+                                    <p class="card-text" th:text="${game.description}"></p>
+                                    <a class="card-link" th:href="@{/games/{id}(id=${game.id})}">View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
