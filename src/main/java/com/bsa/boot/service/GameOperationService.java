@@ -22,6 +22,7 @@ public final class GameOperationService {
     private final GameToDtoMapper gameToDtoMapper;
 
     // not using @Autowired here
+    // interfaces can also be injected (GameRepository)
     public GameOperationService(GameRepository gameRepository, GameToDtoMapper gameToDtoMapper) {
         this.gameRepository = gameRepository;
         this.gameToDtoMapper = gameToDtoMapper;

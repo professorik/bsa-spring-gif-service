@@ -11,6 +11,8 @@ public class BootApplication {
 	public static void main(String[] args) {
 		var context = SpringApplication.run(BootApplication.class, args);
 
+//		System.out.println(context.getClass());
+
 //		var admin = context.getBean(Administrator.class); // when we use DI somewhere Spring basically do similar stuff
 //
 //		System.out.println(admin.getUserName());
