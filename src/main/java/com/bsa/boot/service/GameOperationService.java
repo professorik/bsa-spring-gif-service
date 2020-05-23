@@ -13,6 +13,9 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.UUID;
 
+// @Service annotates classes at the service layer
+// We mark beans with @Service to indicate that it's holding the business logic.
+// So there's no any other specialty except using it in the service layer.
 @Service
 public final class GameOperationService {
     private final GameRepository gameRepository;

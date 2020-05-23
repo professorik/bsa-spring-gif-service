@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+// @Repository annotates classes at the persistence layer
 @Repository
 public class GameRepository {
     private static final Map<UUID, Game> games = new HashMap<>();

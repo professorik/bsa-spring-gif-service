@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Component
+@Component // @Component is class level annotation
 public final class GameToDtoMapper {
     public GameDto map(Game game) {
         return new GameDto(
