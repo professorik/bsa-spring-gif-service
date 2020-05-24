@@ -1,9 +1,10 @@
 # api = http://localhost:9999/api
+# gameId = fc9704f3-4f9a-477c-af1b-377144c92cc3
 
 GET {{api}}/games?some=1&another=2
 ###
 
-GET {{api}}/games/fc9704f3-4f9a-477c-af1b-377144c92cc4
+GET {{api}}/games/{{gameId}}
 ###
 
 POST {{api}}/games

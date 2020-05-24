@@ -21,7 +21,7 @@ public final class ApiGameController {
     }
 
     @GetMapping
-    public List<GameDto> queryGameCollection(@RequestParam Map<String, String> query) {
+    public List<GameDto> queryGameCollection(@RequestParam Map<String, String> query) { // url.com?a=1&b=2
         System.out.println(query);
 
         return gameOperationService.getAll(); // Spring serializes List<GameDto> to JSON automatically using Jackson package

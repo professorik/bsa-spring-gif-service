@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ApiUserController {
-//    @Qualifier(value = "realUserApi") // realUserApi || mockUserApi
+    @Qualifier(value = "realUserApi") // realUserApi || mockUserApi
     @Autowired
     private UsersApiClient usersApiClient;
 

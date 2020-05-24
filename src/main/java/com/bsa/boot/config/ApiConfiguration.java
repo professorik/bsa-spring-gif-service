@@ -7,12 +7,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
-import java.net.http.HttpClient;
+import java.net.http.HttpClient; // java 11
 
 @Configuration
 public class ApiConfiguration {
     @Bean
-    @Scope(value = "prototype")
+    @Scope(value = "prototype") // singleton by default
     public HttpClient httpClient() {
         return HttpClient.newHttpClient();
     }

@@ -12,12 +12,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public final class WebGameController {
-    private final GameOperationService gameOperationService;
-
     @Autowired
-    public WebGameController(GameOperationService gameOperationService) {
-        this.gameOperationService = gameOperationService;
-    }
+    private GameOperationService gameOperationService;
 
     @GetMapping("/")
     public String index() {
@@ -32,7 +28,7 @@ public final class WebGameController {
     }
 
     @GetMapping("/games/{id}")
-    public ModelAndView renderGames(@PathVariable String id, ModelAndView modelAndView) {
+    public ModelAndView renderGame(@PathVariable String id, ModelAndView modelAndView) {
         try {
             modelAndView.setViewName("game.item");
             modelAndView.addObject("game", gameOperationService.findById(id));

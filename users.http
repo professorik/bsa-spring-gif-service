@@ -1,2 +1,4 @@
+# api = http://localhost:9999/api
+
 GET {{api}}/users
 ###

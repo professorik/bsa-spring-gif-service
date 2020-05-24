@@ -12,15 +12,19 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-@Component(value = "realUserApi")
+@Component(value = "realUserApi") // means that HttpUsersApiClient can be autowired by IOC automatically
 public class HttpUsersApiClient implements UsersApiClient {
     private static final Logger logger = LoggerFactory.getLogger(HttpUsersApiClient.class);
 
     @Value("${api.users-url}") // we can reference application.properties values directly with @Value
     private String usersApiUrl; // kebab-case to camelCase automatically
 
+    private final HttpClient client;
+
     @Autowired
-    private HttpClient client;
+    public HttpUsersApiClient(HttpClient client) {
+        this.client = client;
+    }
 
     @Override
     public String getUsersAsJson() {
