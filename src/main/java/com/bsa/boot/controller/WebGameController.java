@@ -15,19 +15,19 @@ public final class WebGameController {
     @Autowired
     private GameOperationService gameOperationService;
 
-    @GetMapping("/")
+    @GetMapping("/") // url.com
     public String index() {
         return "index";
     }
 
-    @GetMapping("/games")
+    @GetMapping("/games") // url.com/games
     public String renderGamesList(Model model) {
         model.addAttribute("games", gameOperationService.getAll());
 
         return "games.list";
     }
 
-    @GetMapping("/games/{id}")
+    @GetMapping("/games/{id}") // // url.com/games/<id>
     public ModelAndView renderGame(@PathVariable String id, ModelAndView modelAndView) {
         try {
             modelAndView.setViewName("game.item");

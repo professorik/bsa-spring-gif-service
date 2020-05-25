@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class ApiUserController {
+public final class ApiUserController {
     @Qualifier(value = "realUserApi") // realUserApi || mockUserApi
     @Autowired
     private UsersApiClient usersApiClient;
