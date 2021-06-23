@@ -50,6 +50,12 @@ public class FS {
         return files != null ? files[new Random().nextInt(files.length)] : null;
     }
 
+    public File getGifPathFromUser(String query, String id) {
+        File gif = new File(getPath("users\\", id, "\\", query));
+        File[] files = gif.listFiles();
+        return files != null ? files[new Random().nextInt(files.length)] : null;
+    }
+
     public File getFromUserFolder(String id, String query) {
         File userGif = new File(getPath("users\\", id), query);
         if (userGif.listFiles() != null) {

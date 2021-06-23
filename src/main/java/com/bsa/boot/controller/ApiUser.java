@@ -150,6 +150,9 @@ public class ApiUser {
         }
         var gif = fileSystemProcessor.getGifPath(query);
         if (gif == null) {
+            gif = fileSystemProcessor.getGifPathFromUser(query, id);
+        }
+        if (gif == null) {
             return ResponseEntity.notFound().build();
         }
         cache.updateCache(id, query, gif.getAbsolutePath());
