@@ -1,4 +1,4 @@
 server.port=9999
 
-giphy.api.key=UjQ5HcTlULjyP3TDeoyW8ncuS40cptnK
+giphy.api.key=secret
 giphy.search.url=http://api.giphy.com/v1/gifs/random

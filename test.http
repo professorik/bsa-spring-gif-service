@@ -1,0 +1,60 @@
+# api = http://localhost:9999
+
+GET {{api}}/cache?query
+X-BSA-GIPHY
+###
+
+GET {{api}}/cache?query=moon
+X-BSA-GIPHY
+###
+
+POST {{api}}/cache/generate
+Content-Type: application/json
+X-BSA-GIPHY
+
+{
+  "query": "moon"
+}
+###
+
+DELETE {{api}}/cache
+X-BSA-GIPHY
+###
+
+GET {{api}}/gifs/
+X-BSA-GIPHY
+###
+
+GET {{api}}/user/{{id}}/all
+X-BSA-GIPHY
+###
+
+GET {{api}}/user/{{id}}/history
+X-BSA-GIPHY
+###
+
+DELETE {{api}}/user/{{id}}/history/clean
+X-BSA-GIPHY
+###
+
+GET {{api}}/user/{{id}}/search?query=ball&force=false
+X-BSA-GIPHY
+###
+
+POST {{api}}/user/{{id}}/generate
+Content-Type: application/json
+X-BSA-GIPHY
+
+{
+"query": "night",
+"force": true
+}
+###
+
+DELETE {{api}}/user/{{id}}/reset?query
+X-BSA-GIPHY
+###
+
+DELETE {{api}}/user/{{id}}/clean
+X-BSA-GIPHY
+###
